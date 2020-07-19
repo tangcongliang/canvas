@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title></title>
+    <style>
+        canvas {
+            border: solid 1px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <canvas width="600" height="300"></canvas>
+    </div>
+</body>
+<script>
+    var mycanvas = document.querySelector('canvas');
+    var ctx = mycanvas.getContext('2d');
+    ctx.moveTo(100, 100);//移动画笔
+    ctx.lineTo(300, 100);
+    ctx.moveTo(100, 200);
+    ctx.lineTo(300, 200);
+    ctx.stroke()
+    // 关于线条的问题 1宽度 2颜色
+    // 产生的原因是线的中心位置，显示的是不会饱和浏览器会增加到
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title></title>
+    <style>
+        canvas {
+            border: solid 1px #ccc;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <canvas width="600" height="300"></canvas>
+    </div>
+</body>
+<script>
+    var mycanvas = document.querySelector('canvas');
+    var ctx = mycanvas.getContext('2d');
+    var h = ctx.canvas.height;
+    var w = ctx.canvas.width;
+    var str = '你吃饭了吗';
+    // 确定画布的中心;
+    ctx.beginPath();
+    ctx.moveTo(0, h / 2 - 0.5);
+    ctx.lineTo(w, h / 2 - 0.5);
+    ctx.moveTo(w / 2 - 0.5, 0);
+    ctx.lineTo(w / 2 - 0.5, h)
+    ctx.strokeStyle = '#eee'
+    ctx.stroke();
+    // 绘制文本；
+    ctx.beginPath();
+    ctx.strokeStyle = '#000'
+    var x0 = w / 2;
+    var y0 = h / 2;
+    // 文本属性（尺寸，大小）对其方式（左右）
+    ctx.font = "40px Microsoft YaHei";
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle'
+    // ctx.strokeText(str, x0, y0)
+    ctx.fillText(str, x0, y0);
+    ctx.beginPath();
+    ctx.arc(100,100,100,0,Math.PI,true);
+    ctx.stroke()
+
+
+
+
+</script>
+
+</html>
